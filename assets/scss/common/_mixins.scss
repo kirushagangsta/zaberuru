@@ -1,0 +1,43 @@
+// mixins here
+
+//Для шрифтов
+@mixin font($size, $weight, $line-height, $color: null) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin up-breakpoint($point) {
+  @if $point==sm {
+    @media screen and (min-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @if $point==md {
+    @media screen and (min-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @if $point==lg {
+    @media screen and (min-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @if $point==xl {
+    @media screen and (min-width: 1300px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point==xl {
+    @media screen and (max-width: 1300px) {
+      @content;
+    }
+  }
+}
