@@ -1,26 +1,46 @@
 .title-1 {
-  @include font(48px, 700, 130%);
+  @include font(64px, 700, 90px);
   letter-spacing: -1px;
+
+  @include breakpoint(xl) {
+    @include font(36px, 900, 60px);
+  }
 }
 
 .title-30 {
   @include font(30px, 400, 160%);
+
+  @include breakpoint(xl) {
+    @include font(24px, 700, 30px);
+  }
 }
 
 .title-2 {
-  @include font(24px, 700, 130%);
+  @include font(36px, 900, 60px);
+
+  @include breakpoint(xl) {
+    @include font(30px, 900, 50px);
+  }
 }
 
 .title-3 {
-  @include font(20px, 700, 130%);
+  @include font(24px, 700, 30px);
+
+  @include breakpoint(xl) {
+    @include font(22px, 700, 30px);
+  }
 }
 
 .title-4 {
-  @include font(16px, 700, 140%);
+  @include font(48px, 700, 70px);
 }
 
 .title-main {
   @include font(16px, 400, 30px);
+
+  @include breakpoint(xl) {
+    @include font(14px, 400, 30px);
+  }
 }
 
 .title-small {
@@ -74,6 +94,10 @@
 
 .title-20-med {
   @include font(20px, 500, 150%);
+
+  @include breakpoint(xl) {
+    @include font(18px, 400, 30px);
+  }
 }
 
 .title-14-bold {
@@ -89,7 +113,11 @@
 }
 
 .title-18-regular {
-  @include font(18px, 400, 120%);
+  @include font(18px, 400, 30px);
+
+  @include breakpoint(xl) {
+    @include font(14px, 400, 30px);
+  }
 }
 
 .title-18-bold {
@@ -381,6 +409,10 @@
   font-weight: 700 !important;
 }
 
+.fw-900 {
+  font-weight: 900 !important;
+}
+
 .width-wrapper {
   width: 1140px;
   margin: 0 auto;
@@ -394,6 +426,18 @@
 
 .white-color {
   color: #FFFFFF;
+}
+
+.gray-color {
+  color: $gray-color;
+}
+
+.black-color {
+  color: #000000;
+}
+
+.grayblue-text {
+  color: $gray-text;
 }
 
 .transition05 {
@@ -422,6 +466,10 @@
   margin-top: 12px;
 }
 
+.ml-32 {
+  margin-left: 32px;
+}
+
 .gap-12 {
   gap: 12px;
 }
@@ -432,4 +480,26 @@
 
 .gap-32 {
   gap: 32px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-96 {
+  gap: 96px;
+}
+
+.gap-120 {
+  gap: 120px;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+
+.gap-mob-32 {
+  @include breakpoint(xl) {
+    gap: 32px;
+  }
 }
