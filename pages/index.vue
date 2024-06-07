@@ -155,7 +155,6 @@
               alt='choose'
               :style='{ "transform": q.active ? "rotate(180deg)" : "rotate(0)" }'
               loading="lazy"
-              @click='q.active = !q.active'
             />
           </div>
           <div
@@ -256,9 +255,9 @@
         box-shadow: 0 10px 30px 0 #27A6E54D;
         padding: 13px 22px;
         border-radius: 16px;
+        height: fit-content;
 
         @include breakpoint(xl) {
-          height: fit-content;
           padding: 5px 14px;
           border-radius: 10px;
         }
