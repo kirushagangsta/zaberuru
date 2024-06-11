@@ -22,6 +22,7 @@
           <img class="main-works__block-image" loading="lazy" src="@/assets/svg/trash.svg" alt="trash">
         </div>
       </div>
+      <img class="main-works__iphone w-100" loading="lazy" src="@/assets/images/iphone-mob.webp" />
       <div class="mt-96 main-works__steps position-relative">
         <div class="d-flex gap-32">
           <div class="main-works__steps-number title-20-med white-color">
@@ -237,6 +238,16 @@
       }
     }
 
+    &__iphone {
+      @include up-breakpoint(xl) {
+        display: none;
+      }
+
+      @include breakpoint(xl) {
+        margin-top: 144px;
+      }
+    }
+
     &__steps {
       background: $white-color;
       padding: 64px 48px;
@@ -244,6 +255,7 @@
 
       @include breakpoint(xl) {
         padding: 48px 20px;
+        margin-top: 0 !important;
 
         .gap-32 {
           gap: 24px;
